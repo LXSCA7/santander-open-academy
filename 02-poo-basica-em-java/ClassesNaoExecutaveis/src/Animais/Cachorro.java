@@ -1,7 +1,7 @@
 package Animais;
 
 public class Cachorro {
-
+    static int numeroDeCachorros;
     private String nome;
     private int idade;
     private String cor;
@@ -11,13 +11,23 @@ public class Cachorro {
     private String estadoDeEspirito;
 
     public Cachorro() {}
-    public Cachorro(String nome, String cor, double altura, double peso, String raca, String estadoDeEspirito) {
+    public Cachorro(String nome, int idade ,String cor, double altura, double peso, String raca, String estadoDeEspirito) {
         this.nome = nome;
+        this.idade = idade;
         this.cor = cor;
         this.altura = altura;
         this.peso = peso;
         this.raca = raca;
         this.estadoDeEspirito = estadoDeEspirito;
+        numeroDeCachorros++;
+    }
+
+    public static int getNumeroDeCachorros() {
+        return numeroDeCachorros;
+    }
+
+    public static void setNumeroDeCachorros(int numeroDeCachorros) {
+        Cachorro.numeroDeCachorros = numeroDeCachorros;
     }
 
     public String getNome() {
