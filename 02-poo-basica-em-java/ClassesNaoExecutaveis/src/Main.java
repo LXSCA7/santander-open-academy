@@ -2,6 +2,7 @@ import Animais.Animal;
 import Animais.Cachorro;
 import Animais.Gato;
 import Animais.Passaro;
+import Lojas.Petshop;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,8 +15,13 @@ public class Main {
 
         Passaro p1 = new Passaro("piupiu", 3, "amarelo", 4, 0.4, "nada");
 
-        c1.soar();
-        g1.soar();
+        Petshop petshop = new Petshop();
+        petshop.darBanho(g1);
+        petshop.tosar(c1);
+        petshop.deixarNoHotel(p1);
+        System.out.println(c1.getEstadoDeEspirito());
+        System.out.println(g1.getEstadoDeEspirito());
+        System.out.println(p1.getEstadoDeEspirito());
         p1.soar();
     }
 }
