@@ -8,5 +8,11 @@ public class Main {
         c1.altura = 25;
         c1.peso = 5.5;
         c1.idade = 2;
+
+        c1.latir();
+        System.out.println("O cachorro pegou a " + c1.pegar());
+        System.out.println("O cachorro está " + c1.interagir("carinho"));
+        System.out.println("O cachorro está " + c1.interagir("nada"));
+        System.out.println("O cachorro está " + c1.interagir("vai dormir"));
     }
 }
